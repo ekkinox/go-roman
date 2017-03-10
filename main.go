@@ -9,7 +9,6 @@ import (
 )
 
 func main() {
-
     num, _  := strconv.Atoi(os.Args[1])
     convert := Convert(num)
 
@@ -18,11 +17,9 @@ func main() {
 }
 
 func Convert(num int) string {
-
     defer timeTrack(time.Now(), "Convert")
 
     var buffer bytes.Buffer
-
     decimalMap := getDecimalMap()
     romanMap   := getRomanMap()
 
@@ -47,7 +44,6 @@ func getDecimalMap() [13]int {
 }
 
 func timeTrack(start time.Time, name string) {
-
     elapsed := time.Since(start)
     fmt.Printf("%s took %s\n", name, elapsed)
 }
